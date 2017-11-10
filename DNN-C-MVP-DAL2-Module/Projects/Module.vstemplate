@@ -1,0 +1,85 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+    <TemplateData>
+        <Name>Enterprise DNN C# MVP Compiled Module</Name>
+        <Description>A Visual Studio template for Enterprise DNN Module Development implementing the MVP and Repository design patterns</Description>
+        <ProjectType>CSharp</ProjectType>
+        <ProjectSubType></ProjectSubType>
+        <SortOrder>10</SortOrder>
+        <CreateNewFolder>false</CreateNewFolder>
+        <LocationField>Enabled</LocationField>
+        <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    </TemplateData>
+    <TemplateContent>
+        <Project TargetFileName="$solutionname$.csproj" File="DnnTemplate.csproj" ReplaceParameters="true">
+            <Folder Name=".build" TargetFolderName=".build">
+                <ProjectItem ReplaceParameters="false" TargetFileName="MSBuild.Community.Tasks.dll">MSBuild.Community.Tasks.dll</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="MSBuild.Community.Tasks.targets">MSBuild.Community.Tasks.targets</ProjectItem>
+            </Folder>
+            <Folder Name="BuildScripts" TargetFolderName="BuildScripts">
+                <ProjectItem ReplaceParameters="false" TargetFileName="ModulePackage.targets">ModulePackage.targets</ProjectItem>
+                <ProjectItem ReplaceParameters="false" TargetFileName="MSBuild.Community.Tasks.Targets">MSBuild.Community.Tasks.Targets</ProjectItem>
+            </Folder>
+            <Folder Name="Components" TargetFolderName="Components">
+                <ProjectItem ReplaceParameters="true" TargetFileName="FeatureController.cs">FeatureController.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="IItemRepository.cs">IItemRepository.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="ISettingsRepository.cs">ISettingsRepository.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="ItemRepository.cs">ItemRepository.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="SettingsRepository.cs">SettingsRepository.cs</ProjectItem>
+            </Folder>
+            <Folder Name="Models" TargetFolderName="Models">
+                <ProjectItem ReplaceParameters="true" TargetFileName="Item.cs">Item.cs</ProjectItem>
+            </Folder>
+            <Folder Name="Presenters" TargetFolderName="Presenters">
+                <ProjectItem ReplaceParameters="true" TargetFileName="EditPresenter.cs">EditPresenter.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="ViewPresenter.cs">ViewPresenter.cs</ProjectItem>
+            </Folder>
+            <Folder Name="Properties" TargetFolderName="Properties">
+                <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+            </Folder>
+            <Folder Name="Resources" TargetFolderName="Resources">
+                <Folder Name="css" TargetFolderName="css">
+                    <ProjectItem ReplaceParameters="false" TargetFileName="edit.css">edit.css</ProjectItem>
+                    <ProjectItem ReplaceParameters="false" TargetFileName="view.css">view.css</ProjectItem>
+                </Folder>
+                <Folder Name="js" TargetFolderName="js">
+                    <ProjectItem ReplaceParameters="false" TargetFileName="view.js">view.js</ProjectItem>
+                </Folder>
+            </Folder>
+            <Folder Name="Scripts" TargetFolderName="Scripts">
+                <ProjectItem ReplaceParameters="true" TargetFileName="00.00.01.SqlDataProvider">00.00.01.SqlDataProvider</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="Uninstall.SqlDataProvider">Uninstall.SqlDataProvider</ProjectItem>
+            </Folder>
+            <Folder Name="Views" TargetFolderName="Views">
+                <Folder Name="App_LocalResources" TargetFolderName="App_LocalResources">
+                    <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.resx">Edit.ascx.resx</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.resx">Settings.ascx.resx</ProjectItem>
+                    <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.resx">View.ascx.resx</ProjectItem>
+                </Folder>
+                <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx">Edit.ascx</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.cs">Edit.ascx.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="Edit.ascx.designer.cs">Edit.ascx.designer.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="IItemListView.cs">IItemListView.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="IItemView.cs">IItemView.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx">Settings.ascx</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.cs">Settings.ascx.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="Settings.ascx.designer.cs">Settings.ascx.designer.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx">View.ascx</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.cs">View.ascx.cs</ProjectItem>
+                <ProjectItem ReplaceParameters="true" TargetFileName="View.ascx.designer.cs">View.ascx.designer.cs</ProjectItem>
+            </Folder>
+            <ProjectItem ReplaceParameters="true" TargetFileName="License.txt">License.txt</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="ReleaseNotes.txt">ReleaseNotes.txt</ProjectItem>
+            <ProjectItem ReplaceParameters="true" TargetFileName="$solutionname$.dnn">DnnTemplate.dnn</ProjectItem>
+        </Project>
+    </TemplateContent>
+	<WizardExtension>
+		<Assembly>ModuleTemplateWizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=null</Assembly>
+		<FullClassName>ModuleTemplateWizard.WizardClass</FullClassName>
+	</WizardExtension>
+    <WizardData>
+        <packages repository="extension"
+              repositoryId="e48e838a-c708-4d43-b822-4d5de0d13eed">
+            <package id="MSBuildTasks" version="1.4.0.56" />
+        </packages>
+    </WizardData>
+</VSTemplate>

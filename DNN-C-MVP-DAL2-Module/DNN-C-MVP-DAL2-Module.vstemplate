@@ -1,0 +1,29 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+    <TemplateData>
+        <Name>Enterprise DNN C# MVP Compiled Module</Name>
+        <Description>A Visual Studio template for Enterprise DNN Module Development implementing the MVP and Repository design patterns</Description>
+        <Icon>_Dnnuclear.ico</Icon>
+        <ProjectType>CSharp</ProjectType>
+        <CreateNewFolder>false</CreateNewFolder>
+        <DefaultName>DNNModule</DefaultName>
+        <ProvideDefaultName>true</ProvideDefaultName>
+    </TemplateData>
+    <TemplateContent>
+	    <CustomParameters>
+		  <CustomParameter Name="$rootnamespace$" Value="DotNetNuke.Modules"/>
+		  <CustomParameter Name="$ownername$" Value="DotNetNuke Corporation"/>
+		  <CustomParameter Name="$owneremail$" Value="training@dnncorp.com"/>
+		  <CustomParameter Name="$ownerwebsite$" Value="http://www.dotnetnuke.com"/>
+		  <CustomParameter Name="$devenvironmenturl$" Value="http://dnndev.me" />
+		  <CustomParameter Name="$useiisexpress$" Value="false" />
+		</CustomParameters>
+        <ProjectCollection>
+			<ProjectTemplateLink>Projects\Module.vstemplate</ProjectTemplateLink>
+			<ProjectTemplateLink>Projects\Module.Tests\Tests.vstemplate</ProjectTemplateLink>
+        </ProjectCollection>
+    </TemplateContent>
+	<WizardExtension>
+		<Assembly>ModuleTemplateWizard, Version=1.0.0.0, Culture=Neutral, PublicKeyToken=null</Assembly>
+		<FullClassName>ModuleTemplateWizard.WizardClass</FullClassName>
+	</WizardExtension>
+</VSTemplate>

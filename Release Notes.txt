@@ -1,0 +1,31 @@
+Enterprise MVP DNN Module Template
+http://dnnmvptemplate.codeplex.com/
+====================================
+CHANGE LOG
+====================================
+
+
+
+
+Version 1.3
+
+------------------------------------
+
+
+Bug fixes:
+
+- Fixed hard-coded table name on DAL2 model
+
+New features:
+
+- Updated MSBuild Community Tasks 
+- Updated Visual Studio 2013 SDK references
+- Updated Unit Testing framework
+
+
+Version 1.2
+------------------------------------
+
+New features:
+
+- Initial Open-source release
